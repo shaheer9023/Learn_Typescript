@@ -9,8 +9,9 @@ It is also Object Oriented
 ## BENEFITS
 
 * Manageable Code
-* Other benefit
-* Another benefit
+* ECMAScript support
+* We can use data type , classes , interface , etx......
+* IDE support (Intelligence)
 
 # Requirements for Installation:
 
