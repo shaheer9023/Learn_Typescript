@@ -46,9 +46,9 @@ else {
     console.log('Login Failed');
 }
 //same example with else
-if (Username === 'Shaheer' && password === 12345) { //here password is a 12345
+if (Username === 'Shaheer' && password === 12345) { //error because password is a number
     console.log('Login Successful');
 }
 else {
-    console.log('Login Failed');//now it will print login failed because password is a 1234
+    console.log('Login Failed');
 }
