@@ -1,12 +1,5 @@
 # TypeScript Variables
 
-
-
-
-
-
-
-
 ## Explanation
 
 * **name1**: Declared as a string variable and assigned the value "Shaheer".
