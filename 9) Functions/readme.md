@@ -29,8 +29,8 @@ Yeh ek simple function hai jo sirf "hello" print karta hai. Jab aap `greet()` ko
 
 ## Another Method:
 ```typescript
-function Greet() {
-    return "hello";
+function Greet():string {
+    return "hello";//jb bhi koi function return kartey hain to  uski data type bhi likhty hain
 };
 let GreeT = Greet();
 console.log(GreeT);
@@ -42,7 +42,7 @@ Yahaan pe hum ne ek function banaya hai jo "hello" return karta hai. `GreeT` var
 
 ## Another Example:
 ```typescript
-function total(){
+function total():number{
     let total=2+2;
     return total;
 }
@@ -60,3 +60,6 @@ console.log('total is',Total);
 ```
 ###  Explanation:
 Is example mein hum ne `total()` function ko run kar ke uska result `Total` variable mein store kiya aur phir usko print kiya.
+
+## Note
+jab bhi koi function return hoga uski data type bhi likhni hogi

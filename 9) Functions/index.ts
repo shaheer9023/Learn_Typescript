@@ -14,14 +14,14 @@ function greet() {
 greet();//function ko aesay call karty hain
 
 // Another method
-function Greet() {
-    return "hello";
+function Greet():string {
+    return "hello";//jb bhi koi function return kartey hain to  uski data type bhi likhty hain
 };
 let GreeT = Greet();
 console.log(GreeT);
 
 // Another Example
-function total(){
+function total():number {
     let total=2+2;
     return total;
 }

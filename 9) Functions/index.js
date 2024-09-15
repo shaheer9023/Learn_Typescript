@@ -3,8 +3,10 @@
 //  syntax:
 // without parameters
 // function functionname() {};
+// functionname();
 // with parameters
 // function functionname(parameter1, parameter2) {};
+// functionname(10, 20);
 //  example without parameters
 function greet() {
     console.log("hello");
@@ -12,7 +14,7 @@ function greet() {
 greet(); //function ko aesay call karty hain
 // Another method
 function Greet() {
-    return "hello";
+    return "hello"; //jb bhi koi function return kartey hain to  uski data type bhi likhty hain
 }
 ;
 let GreeT = Greet();
