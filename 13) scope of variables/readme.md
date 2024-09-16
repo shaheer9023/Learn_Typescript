@@ -1,6 +1,6 @@
 # scope of variables in TypeScript (aur JavaScript)
 ## these are three types of variables
- * `var`,
+ * `var`
  * `let`
  * `const`
 
