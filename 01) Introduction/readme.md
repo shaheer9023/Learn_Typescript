@@ -12,8 +12,8 @@ It is a superset of JavaScript developed by Microsoft and is Object-Oriented.
 
 ## Requirements for Installation:
 
-Node.js
+- Node.js
 
-VS Code
+- VS Code
 
-Basic knowledge of JavaScript (optional)
+- Basic knowledge of JavaScript (optional)
