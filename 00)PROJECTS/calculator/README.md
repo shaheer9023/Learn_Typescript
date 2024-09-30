@@ -1,6 +1,5 @@
-#Calculator Using TypeScript/JavaScript
 
-# Simple Calculator Using Node.js
+# Simple Calculator using TypeScript/JavaScript  Using Node.js
 
 ## Overview
 Yeh ek simple calculator program hai jo user se do numbers aur ek operator input karta hai (`+`, `-`, `*`, `/`), aur phir result show karta hai. Is program mein hum switch statement ka use karte hain operations perform karne ke liye.
