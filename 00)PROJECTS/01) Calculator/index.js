@@ -1,4 +1,5 @@
 "use strict";
+// before making this project first read  README file for your help and instructions
 Object.defineProperty(exports, "__esModule", { value: true });
 var prompt = require('prompt-sync')();
 let n1 = parseInt(prompt("Enter the first number: "));
