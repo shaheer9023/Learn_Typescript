@@ -24,7 +24,7 @@ function clock() {
     if (hrs == 0) {
         hrs = 12;
     }
-    let ampm = hrs <= 12 ? "PM" : "AM";
+    let ampm = hrs >= 12 ? "PM" : "AM";
     hrs = hrs < 10 ? "0" + hrs : hrs;
     min = min < 10 ? "0" + min : min;
     sec = sec < 10 ? "0" + sec : sec;
