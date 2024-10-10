@@ -2,11 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: poppins,sans-serif;
+    font-family: cursive;
 }
 body{
     min-height: 100vh;
-    background-color: burlywood;
+    background-color: rgb(15, 182, 233);
 }
 
 body,.time,.leftside,.rightside{
