@@ -15,7 +15,7 @@ let arrowFunction =() => {
 hello(arrowFunction);
 
 
-// Easy level example 1
+//  example 1
 
 function greetUser(callback: () => void) {
     console.log('User is about to be greeted:');
@@ -29,7 +29,7 @@ let sayHello = () => {
 greetUser(sayHello);
 
 
-// Easy level example 2
+//  example 2
 
 function compute(number: number, callback: (num: number) => number) {
     let result = callback(number);
@@ -41,7 +41,7 @@ let square = (n: number) => n * n;
 compute(5, square);
 
 
-// Medium level example 1
+//  example 3
 
 function processArray(items: number[], callback: (item: number) => void) {
     for (let i = 0; i < items.length; i++) {
@@ -55,48 +55,3 @@ let printDouble = (num: number) => {
 
 processArray([1, 2, 3, 4], printDouble);
 
-
-// Medium level example 2
-
-function fetchData(callback: (data: string) => void) {
-    setTimeout(() => {
-        let data = "Data fetched from server";
-        callback(data);
-    }, 2000);
-}
-
-let displayData = (data: string) => {
-    console.log(data);
-};
-
-fetchData(displayData);
-
-// Difficult level example 1
-
-function outerFunction(callback: () => () => string) {
-    let innerFunction = callback();
-    console.log(innerFunction());
-}
-
-let createGreeting = () => {
-    return () => {
-        return "Hello from the inner function!";
-    };
-};
-
-outerFunction(createGreeting);
-
-// Difficult level example 2
-
-function fetchWithCallback(url: string, callback: (data: any) => void) {
-    fetch(url)
-        .then(response => response.json())
-        .then(data => callback(data))
-        .catch(error => console.error('Error:', error));
-}
-
-let handleData = (data: any) => {
-    console.log('Fetched Data:', data);
-};
-
-fetchWithCallback('https://api.example.com/data', handleData);

@@ -50,7 +50,7 @@ hello(arrowFunction);  // Yahan arrowFunction ko hello function ke andar pass ki
 
 ---
 
-### Easy Level Example 1
+###  Example 1
 
 **Description:** Simple callback function jo message print karti hai.
 
@@ -87,7 +87,7 @@ Hello, Shaheer!
 
 ---
 
-### Easy Level Example 2
+###  Example 2
 
 **Description:** Number ko square karne wala callback.
 
@@ -122,7 +122,7 @@ Result: 25
 
 ---
 
-### Medium Level Example 1
+###  Example 3
 
 **Description:** Array ke har element ko process karne wala callback.
 
@@ -161,135 +161,3 @@ processArray([1, 2, 3, 4], printDouble);
 ```
 
 ---
-
-### Medium Level Example 2
-
-**Description:** Async operation simulate karne wala callback.
-
-```ts
-function fetchData(callback: (data: string) => void) {
-    setTimeout(() => {
-        let data = "Data fetched from server";
-        callback(data);
-    }, 2000);
-}
-
-let displayData = (data: string) => {
-    console.log(data);
-};
-
-fetchData(displayData);
-```
-
-#### Explanation:
-
-1. **Function `fetchData` Banana:**
-    - Yeh function ek `callback` leta hai.
-    - `setTimeout` ke zariye 2 seconds ke baad data fetch simulate karta hai.
-    - Phir `callback` ko fetched data ke sath call karta hai.
-
-2. **Arrow Function `displayData` Define Karna:**
-    - Yeh function received data ko console par print karta hai.
-
-3. **Function Call:**
-    - `fetchData(displayData)` se 2 seconds ke baad message print hoga.
-
-**Output (After 2 seconds):**
-```
-Data fetched from server
-```
-
----
-
-### Difficult Level Example 1
-
-**Description:** Callback function jo ek aur function return karta hai.
-
-```ts
-function outerFunction(callback: () => () => string) {
-    let innerFunction = callback();
-    console.log(innerFunction());
-}
-
-let createGreeting = () => {
-    return () => {
-        return "Hello from the inner function!";
-    };
-};
-
-outerFunction(createGreeting);
-```
-
-#### Explanation:
-
-1. **Function `outerFunction` Banana:**
-    - Yeh function ek `callback` leta hai jo ek aur function return karta hai.
-    - `callback()` ko call karke ek `innerFunction` milta hai.
-    - Phir `innerFunction()` ko call karke result print karta hai.
-
-2. **Arrow Function `createGreeting` Define Karna:**
-    - Yeh function ek aur function return karta hai jo ek greeting message deta hai.
-
-3. **Function Call:**
-    - `outerFunction(createGreeting)` se pehle `createGreeting` call hoga, jo `innerFunction` return karega.
-    - Phir `innerFunction` call hoga aur message print hoga.
-
-**Output:**
-```
-Hello from the inner function!
-```
-
----
-
-### Difficult Level Example 2
-
-**Description:** Callback ke zariye promise handle karna.
-
-```ts
-function fetchWithCallback(url: string, callback: (data: any) => void) {
-    fetch(url)
-        .then(response => response.json())
-        .then(data => callback(data))
-        .catch(error => console.error('Error:', error));
-}
-
-let handleData = (data: any) => {
-    console.log('Fetched Data:', data);
-};
-
-fetchWithCallback('https://api.example.com/data', handleData);
-```
-
-#### Explanation:
-
-1. **Function `fetchWithCallback` Banana:**
-    - Yeh function ek URL aur ek `callback` leta hai.
-    - `fetch` API ka use karke data fetch karta hai.
-    - Data milne par `callback(data)` ko call karta hai.
-    - Agar error aata hai to console par error message print karta hai.
-
-2. **Arrow Function `handleData` Define Karna:**
-    - Yeh function fetched data ko console par print karta hai.
-
-3. **Function Call:**
-    - `fetchWithCallback('https://api.example.com/data', handleData)` se URL se data fetch hoga aur `handleData` ke through print hoga.
-
-**Output (Agar URL valid hai):**
-```
-Fetched Data: { ...fetched data... }
-```
-
-**Ya Agar Error Aata Hai:**
-```
-Error: ...error message...
-```
-
----
-
-### Summary
-
-**Callback Function:**
-- Ek function jo doosre function ko argument ke taur par di jati hai.
-- Asaan tareeqe se asynchronous operations handle karne me madad deti hai.
-- JavaScript aur TypeScript me bohot commonly use hoti hain.
-
